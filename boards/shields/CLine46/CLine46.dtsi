@@ -6,7 +6,7 @@
 / {
     chosen {
         zmk,physical-layout = &cline46_physical_layout;
-        zmk,battery = &vbatt;
+        zmk,battery = &non_lipo_battery;
     };
 
     cline46_physical_layout: cline46_physical_layout {
@@ -102,14 +102,12 @@
         status = "disabled";
     };
 
-    vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        io-channels = <&adc 0>;
-        power-gpios; // unset
-        output-ohms = <470000>;
-        full-ohms = <(1000000 + 470000)>;
-        // For Ni-Mh 1U
-        mv-to-pct-thresholds = <1100 1160 1190 1210 1230 1250 1270 1290 1310 1330 1400>;
+    non_lipo_battery: non_lipo_battery {
+        compatible = "zmk,non-lipo-battery";
+        io-channels = <&adc 0>;  // Replace with your ADC channel number
+        
+        // Optional: Power control GPIO for the voltage divider
+        //power-gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;  // Replace with your GPIO
     };
 };
 
