@@ -6,7 +6,7 @@ manifest:
       url-base: https://github.com/badjeff
     - name: caksoylar  # <-- RGB LED
       url-base: https://github.com/caksoylar
-    - name: caksoylar  # <-- Battery level smoothing
+    - name: takamaru-fpv  # <-- Battery level smoothing
       url-base: https://github.com/takamaru-fpv
 
   projects:
