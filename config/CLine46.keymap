@@ -60,6 +60,22 @@
             bindings = <&kp LEFT_WIN &kp LEFT_SHIFT &kp NUMBER_3>;
             label = "SS_MAC";
         };
+
+        bt_windows: bt_windows {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 20>, <&to 0>;
+
+            label = "BT_WINDOWS";
+        };
+
+        bt_mac: bt_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&macro_wait_time 20>, <&to 1>;
+
+            label = "BT_MAC";
+        };
     };
 
     behaviors {
@@ -124,7 +140,7 @@
         SCROLL {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans          &trans        &trans        &trans        &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&bt_windows   &bt_mac         &trans        &trans        &trans        &trans                            &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans        &trans                            &trans  &trans  &trans  &trans  &trans  &trans
               &trans          &trans        &trans        &trans        &trans  &trans    &studio_unlock  &trans                  &trans  &trans
             >;
