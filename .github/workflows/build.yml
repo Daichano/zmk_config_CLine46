@@ -88,7 +88,8 @@ jobs:
         env:
           PRIVATE_REPO_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
         run: |
-          git config --global url."https://${PRIVATE_REPO_TOKEN}@github.com/Daichano/".insteadOf "https://github.com/Daichano/"
+          echo "https://x-access-token:${PRIVATE_REPO_TOKEN}@github.com" >> ~/.git-credentials
+          git config --global credential.helper store
 
       - name: West Init
         working-directory: ${{ env.base_dir }}
