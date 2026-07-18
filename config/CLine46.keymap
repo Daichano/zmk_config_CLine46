@@ -127,9 +127,9 @@
 
         layer_number {
             bindings = <
-&kp CARET  &kp EQUAL     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp COLON                           &trans  &trans  &trans  &trans  &trans  &trans
-&kp MINUS  &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LC(PLUS)                        &trans  &trans  &trans  &trans  &trans  &kp ENTER
-&kp SLASH  &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&kp CARET  &kp EQUAL     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LC(SEMI)                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp MINUS  &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LC(LS(SEMI))                    &trans  &trans  &trans  &trans  &trans  &kp ENTER
+&kp SLASH  &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COLON                           &trans  &trans  &trans  &trans  &trans  &trans
            &kp ESC       &kp NUMBER_0  &kp DOT       &trans        &kp SPACE  &kp BACKSPACE    &trans  &trans                  &trans  &trans
             >;
         };
